@@ -1,0 +1,113 @@
+[gd_scene load_steps=8 format=3 uid="uid://ddma6v4cyduy0"]
+
+[ext_resource type="Script" uid="uid://bo37mmqprcxfa" path="res://Scripts/new_screen.gd" id="1_b5k8w"]
+[ext_resource type="Texture2D" uid="uid://7vtntnas0lpv" path="res://styles/Img/Menu/Button/cap.png" id="2_0ebcr"]
+[ext_resource type="Theme" uid="uid://dylivt6vsw3y3" path="res://styles/Ttf/Theme.tres" id="3_0ebcr"]
+[ext_resource type="Texture2D" uid="uid://d0wi6vi505xtp" path="res://styles/Img/Menu/Button/buttons.jpeg" id="4_4ao3t"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4ao3t"]
+bg_color = Color(0.875776, 0.505886, 0.350574, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5cm53"]
+texture = ExtResource("4_4ao3t")
+region_rect = Rect2(0, 38.8512, 174, 39.1488)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ule57"]
+texture = ExtResource("4_4ao3t")
+region_rect = Rect2(0, 0, 174, 39.0146)
+
+[node name="NewScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_b5k8w")
+
+[node name="Container" type="BoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = -90.0
+offset_right = 160.0
+offset_bottom = 90.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Container"]
+layout_mode = 2
+texture = ExtResource("2_0ebcr")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Container/TextureRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -131.0
+offset_top = -82.0
+offset_right = 133.0
+offset_bottom = 79.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BoxContainer2" type="BoxContainer" parent="Container/TextureRect/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="Container/TextureRect"]
+layout_mode = 2
+offset_left = 2.0
+offset_top = 12.0
+offset_right = 317.0
+offset_bottom = 62.0
+theme = ExtResource("3_0ebcr")
+theme_override_colors/font_color = Color(0.717348, 0.372721, 0.223172, 1)
+theme_override_font_sizes/font_size = 50
+text = "Nueva Partida"
+horizontal_alignment = 1
+
+[node name="BoxContainer" type="BoxContainer" parent="Container/TextureRect"]
+layout_mode = 2
+offset_left = 2.0
+offset_top = 75.0
+offset_right = 319.0
+offset_bottom = 108.0
+alignment = 1
+
+[node name="Label" type="Label" parent="Container/TextureRect/BoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_0ebcr")
+theme_override_colors/font_color = Color(0.717647, 0.372549, 0.223529, 1)
+text = "Nombre:"
+
+[node name="LineEdit" type="LineEdit" parent="Container/TextureRect/BoxContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme = ExtResource("3_0ebcr")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_4ao3t")
+
+[node name="Button_started" type="Button" parent="Container/TextureRect"]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+offset_left = 110.0
+offset_top = 129.0
+offset_right = 210.0
+offset_bottom = 159.0
+theme = ExtResource("3_0ebcr")
+theme_override_colors/font_hover_color = Color(0.812405, 0.44186, 0.283936, 1)
+theme_override_colors/font_color = Color(0.717647, 0.372549, 0.223529, 1)
+theme_override_font_sizes/font_size = 22
+theme_override_styles/hover = SubResource("StyleBoxTexture_5cm53")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ule57")
+text = "Crear"
+icon_alignment = 1
+
+[connection signal="pressed" from="Container/TextureRect/Button_started" to="." method="_on_button_started_pressed"]

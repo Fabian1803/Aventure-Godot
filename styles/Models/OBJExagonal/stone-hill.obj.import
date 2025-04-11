@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://01wdmdq1xqaf"
+path="res://.godot/imported/stone-hill.obj-ce8e30d4591f4733fd5262bdf720100d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/stone-hill.obj-ce8e30d4591f4733fd5262bdf720100d.mesh"]
+
+source_file="res://styles/Models/OBJExagonal/stone-hill.obj"
+dest_files=["res://.godot/imported/stone-hill.obj-ce8e30d4591f4733fd5262bdf720100d.mesh", "res://.godot/imported/stone-hill.obj-ce8e30d4591f4733fd5262bdf720100d.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

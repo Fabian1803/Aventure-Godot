@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bhxvxrp2ckh44"
+path="res://.godot/imported/building-mill.obj-10ad62575499b38b620f5f837d412591.mesh"
+
+[deps]
+
+files=["res://.godot/imported/building-mill.obj-10ad62575499b38b620f5f837d412591.mesh"]
+
+source_file="res://styles/Models/OBJExagonal/building-mill.obj"
+dest_files=["res://.godot/imported/building-mill.obj-10ad62575499b38b620f5f837d412591.mesh", "res://.godot/imported/building-mill.obj-10ad62575499b38b620f5f837d412591.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

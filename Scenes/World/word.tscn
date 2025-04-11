@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://bycf724kvgfdn"]
+
+[ext_resource type="PackedScene" uid="uid://ypm2i2of2v1r" path="res://Scenes/World/ocean.tscn" id="1_6yfv5"]
+[ext_resource type="PackedScene" uid="uid://bjjceeyq3csc3" path="res://Scenes/World/sky.tscn" id="2_euvj3"]
+[ext_resource type="PackedScene" uid="uid://blv0qrmim3d8c" path="res://Scenes/World/map.tscn" id="3_64o8r"]
+[ext_resource type="PackedScene" uid="uid://dyivdbp1uwlt1" path="res://Scenes/Characters/player.tscn" id="4_hm4br"]
+
+[node name="Word" type="Node3D"]
+
+[node name="Ocean" parent="." instance=ExtResource("1_6yfv5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.85745, 0)
+
+[node name="Sky" parent="." instance=ExtResource("2_euvj3")]
+
+[node name="Map" parent="." instance=ExtResource("3_64o8r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.520059, 0)
+
+[node name="Player" parent="." instance=ExtResource("4_hm4br")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.2642, 6.14079, 48.9192)

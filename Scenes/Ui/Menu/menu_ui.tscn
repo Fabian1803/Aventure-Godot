@@ -1,0 +1,69 @@
+[gd_scene load_steps=8 format=3 uid="uid://baxmigja7x7sg"]
+
+[ext_resource type="PackedScene" uid="uid://88pct6kr5dip" path="res://Scenes/Ui/Menu/splash _screen.tscn" id="1_dqbsc"]
+[ext_resource type="Script" uid="uid://dp4ryf17edydm" path="res://Scripts/menu_ui.gd" id="1_ykl8o"]
+[ext_resource type="PackedScene" uid="uid://byak6ds4er83l" path="res://Scenes/Ui/Menu/menu_screen.tscn" id="2_nb8fm"]
+
+[sub_resource type="Animation" id="Animation_ykl8o"]
+length = 7.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Menu:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_xf012"]
+resource_name = "config_new1"
+length = 4.0
+
+[sub_resource type="Animation" id="Animation_nb8fm"]
+resource_name = "menuui"
+length = 7.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Menu:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5, 6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xf012"]
+_data = {
+&"RESET": SubResource("Animation_ykl8o"),
+&"config_new1": SubResource("Animation_xf012"),
+&"menuui": SubResource("Animation_nb8fm")
+}
+
+[node name="MenuUi" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ykl8o")
+
+[node name="SplashScreen" parent="." instance=ExtResource("1_dqbsc")]
+layout_mode = 1
+
+[node name="Menu" parent="." instance=ExtResource("2_nb8fm")]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_xf012")
+}
+autoplay = "menuui"

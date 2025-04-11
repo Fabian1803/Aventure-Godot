@@ -1,0 +1,8 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://dylivt6vsw3y3"]
+
+[ext_resource type="FontFile" uid="uid://bg34bqxd61t5k" path="res://styles/Ttf/Stardew_Valley.ttf" id="1_j1uik"]
+
+[resource]
+default_font = ExtResource("1_j1uik")
+default_font_size = 25
+Button/styles/disabled_mirrored = null

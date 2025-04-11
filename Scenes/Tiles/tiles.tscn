@@ -1,0 +1,299 @@
+[gd_scene load_steps=60 format=3 uid="uid://b320wj8h3fug"]
+
+[ext_resource type="ArrayMesh" uid="uid://cwb2ushgb241e" path="res://styles/Models/OBJExagonal/unit-ship-large.obj" id="164_cvdmp"]
+[ext_resource type="ArrayMesh" uid="uid://06uxnfgdfphh" path="res://styles/Models/OBJExagonal/unit-ship.obj" id="165_0k53k"]
+[ext_resource type="ArrayMesh" uid="uid://bq5c3s7bt1oyk" path="res://styles/Models/OBJExagonal/unit-tree.obj" id="167_ou35g"]
+[ext_resource type="ArrayMesh" uid="uid://jq8stt1kpr7b" path="res://styles/Models/OBJ Survival/bedroll.obj" id="334_q74ou"]
+[ext_resource type="ArrayMesh" uid="uid://bvopmji7e5h81" path="res://styles/Models/OBJ Survival/bucket.obj" id="341_a6b2d"]
+[ext_resource type="ArrayMesh" uid="uid://b3uy41j0rel7c" path="res://styles/Models/OBJ Survival/campfire-pit.obj" id="343_yjp66"]
+[ext_resource type="ArrayMesh" uid="uid://dkfy0vtgt1j6c" path="res://styles/Models/OBJ Survival/campfire-stand.obj" id="344_n371w"]
+[ext_resource type="ArrayMesh" uid="uid://1rm41uo4dg6u" path="res://styles/Models/OBJ Survival/chest.obj" id="345_bcvfk"]
+[ext_resource type="ArrayMesh" uid="uid://d2iwo1m05hi1v" path="res://styles/Models/OBJ Survival/fence-doorway.obj" id="346_4ecuu"]
+[ext_resource type="ArrayMesh" uid="uid://dh5qc4jsjsqr4" path="res://styles/Models/OBJ Survival/fence-fortified.obj" id="347_setm5"]
+[ext_resource type="ArrayMesh" uid="uid://b7vkeehvd2kpe" path="res://styles/Models/OBJ Survival/fence.obj" id="348_ubxqo"]
+[ext_resource type="ArrayMesh" uid="uid://cd8vmxwocdukd" path="res://styles/Models/OBJ Survival/fish-large.obj" id="349_lneuh"]
+[ext_resource type="ArrayMesh" uid="uid://e70u7x7jwose" path="res://styles/Models/OBJ Survival/fish.obj" id="350_4hbhv"]
+[ext_resource type="ArrayMesh" uid="uid://bvevk1h4lvwq4" path="res://styles/Models/OBJ Survival/floor-hole.obj" id="351_n5a6j"]
+[ext_resource type="ArrayMesh" uid="uid://d2iapcyhvr0s8" path="res://styles/Models/OBJ Survival/floor-old.obj" id="352_0gqee"]
+[ext_resource type="ArrayMesh" uid="uid://b7bytulp3ywdx" path="res://styles/Models/OBJ Survival/floor.obj" id="353_5wvk1"]
+[ext_resource type="ArrayMesh" uid="uid://dlw6w4cra5a7s" path="res://styles/Models/OBJ Survival/grass-large.obj" id="354_8t6qc"]
+[ext_resource type="ArrayMesh" uid="uid://bniql2rkrx42p" path="res://styles/Models/OBJ Survival/grass.obj" id="355_5bm7v"]
+[ext_resource type="ArrayMesh" uid="uid://hwhm0e5decty" path="res://styles/Models/OBJ Survival/resource-planks.obj" id="363_lt5jn"]
+[ext_resource type="ArrayMesh" uid="uid://dd0fl1rbsfvb0" path="res://styles/Models/OBJ Survival/resource-wood.obj" id="366_j3kqx"]
+[ext_resource type="ArrayMesh" uid="uid://ddiyxslvgv45j" path="res://styles/Models/OBJ Survival/rock-a.obj" id="367_8t2y4"]
+[ext_resource type="ArrayMesh" uid="uid://don8fgnq2vfu3" path="res://styles/Models/OBJ Survival/rock-b.obj" id="368_t0tle"]
+[ext_resource type="ArrayMesh" uid="uid://6aeef1g28m10" path="res://styles/Models/OBJ Survival/rock-c.obj" id="369_0n11p"]
+[ext_resource type="ArrayMesh" uid="uid://dw63orafjc22b" path="res://styles/Models/OBJ Survival/signpost-single.obj" id="375_6vige"]
+[ext_resource type="ArrayMesh" uid="uid://cjxeylwqintck" path="res://styles/Models/OBJ Survival/signpost.obj" id="376_fppnh"]
+[ext_resource type="ArrayMesh" uid="uid://bsfqoidq3x32k" path="res://styles/Models/OBJ Survival/structure-canvas.obj" id="377_pggmr"]
+[ext_resource type="ArrayMesh" uid="uid://b03irk3xiy7w8" path="res://styles/Models/OBJ Survival/structure-floor.obj" id="378_ohvkk"]
+[ext_resource type="ArrayMesh" uid="uid://bdwsyr8jma6j8" path="res://styles/Models/OBJ Survival/structure-roof.obj" id="384_w4yuv"]
+[ext_resource type="ArrayMesh" uid="uid://d2jipjt1vjksa" path="res://styles/Models/OBJ Survival/structure.obj" id="385_d1tjc"]
+[ext_resource type="ArrayMesh" uid="uid://dbaos6bt4uvkb" path="res://styles/Models/OBJ Survival/tent-canvas-half.obj" id="386_xcvsy"]
+[ext_resource type="ArrayMesh" uid="uid://d4k6onfy728t2" path="res://styles/Models/OBJ Survival/tent-canvas.obj" id="387_vvl7o"]
+[ext_resource type="ArrayMesh" uid="uid://b3m8ae5wpun6x" path="res://styles/Models/OBJ Survival/tent.obj" id="388_h3teb"]
+[ext_resource type="ArrayMesh" uid="uid://cbitvwibqw5yj" path="res://styles/Models/OBJ Survival/tool-axe-upgraded.obj" id="389_eb80r"]
+[ext_resource type="ArrayMesh" uid="uid://bcd0ilapucmdw" path="res://styles/Models/OBJ Survival/tool-axe.obj" id="390_142v5"]
+[ext_resource type="ArrayMesh" uid="uid://c3f3vyjrffb2k" path="res://styles/Models/OBJ Survival/tool-hammer-upgraded.obj" id="391_w3ley"]
+[ext_resource type="ArrayMesh" uid="uid://cct115wrct36d" path="res://styles/Models/OBJ Survival/tool-hammer.obj" id="392_gnq8h"]
+[ext_resource type="ArrayMesh" uid="uid://d3ecq6komnvet" path="res://styles/Models/OBJ Survival/tool-hoe-upgraded.obj" id="393_4tq7r"]
+[ext_resource type="ArrayMesh" uid="uid://xsn581imd6jw" path="res://styles/Models/OBJ Survival/tool-hoe.obj" id="394_kdr03"]
+[ext_resource type="ArrayMesh" uid="uid://owhs5g74wkxe" path="res://styles/Models/OBJ Survival/tool-pickaxe-upgraded.obj" id="395_lbi5m"]
+[ext_resource type="ArrayMesh" uid="uid://cf3368vrvx7at" path="res://styles/Models/OBJ Survival/tool-pickaxe.obj" id="396_nv8gh"]
+[ext_resource type="ArrayMesh" uid="uid://b18yqndo8q45b" path="res://styles/Models/OBJ Survival/tool-shovel-upgraded.obj" id="397_nv1yk"]
+[ext_resource type="ArrayMesh" uid="uid://da4gq7qd5uw2q" path="res://styles/Models/OBJ Survival/tool-shovel.obj" id="398_l1vml"]
+[ext_resource type="ArrayMesh" uid="uid://cvksjnx2b8qng" path="res://styles/Models/OBJ Survival/tree-autumn-trunk.obj" id="400_0tus2"]
+[ext_resource type="ArrayMesh" uid="uid://dl327jdu2a3sj" path="res://styles/Models/OBJ Survival/tree-autumn.obj" id="401_xq8cf"]
+[ext_resource type="ArrayMesh" uid="uid://nkutbdx4p5g1" path="res://styles/Models/OBJ Survival/tree-log-small.obj" id="402_se5ne"]
+[ext_resource type="ArrayMesh" uid="uid://bxw3dl706aoc8" path="res://styles/Models/OBJ Survival/tree-log.obj" id="403_tuwxs"]
+[ext_resource type="ArrayMesh" uid="uid://b4fhh7husnw8w" path="res://styles/Models/OBJ Survival/tree-tall.obj" id="404_0r88f"]
+[ext_resource type="ArrayMesh" uid="uid://cw3yo2mjhrmkt" path="res://styles/Models/OBJ Survival/tree-trunk.obj" id="405_jeia8"]
+[ext_resource type="ArrayMesh" uid="uid://d4k33gx0vyhfm" path="res://styles/Models/OBJ Survival/tree.obj" id="406_0456x"]
+[ext_resource type="ArrayMesh" uid="uid://buq1fp6852rtb" path="res://styles/Models/OBJ Survival/workbench-anvil.obj" id="407_ukkt3"]
+[ext_resource type="ArrayMesh" uid="uid://vc8noe7i6i5y" path="res://styles/Models/OBJ Survival/workbench-grind.obj" id="408_1u2wl"]
+[ext_resource type="ArrayMesh" uid="uid://bll4j8moy3dmh" path="res://styles/Models/OBJ Survival/workbench.obj" id="409_gf7vh"]
+[ext_resource type="ArrayMesh" uid="uid://buvudn10rw06n" path="res://styles/Models/OBJDungeon/barrel.obj" id="411_lsfs1"]
+[ext_resource type="ArrayMesh" uid="uid://b4rt7ywtxi3nw" path="res://styles/Models/OBJDungeon/chest.obj" id="412_k15kd"]
+[ext_resource type="ArrayMesh" uid="uid://cwvsxvn1ggx4h" path="res://styles/Models/OBJDungeon/rocks.obj" id="419_knoyq"]
+[ext_resource type="ArrayMesh" uid="uid://dupkaq0u0w42i" path="res://styles/Models/OBJDungeon/stairs.obj" id="420_khd4c"]
+[ext_resource type="ArrayMesh" uid="uid://cm8sb8p37mnyb" path="res://styles/Models/OBJDungeon/stones.obj" id="421_rdubp"]
+[ext_resource type="ArrayMesh" uid="uid://bp5qxkkfhv27i" path="res://styles/Models/OBJDungeon/wood-structure.obj" id="427_gl3ti"]
+[ext_resource type="ArrayMesh" uid="uid://2wuiu0ct1yfp" path="res://styles/Models/OBJDungeon/wood-support.obj" id="428_ul146"]
+
+[node name="Tiles" type="Node3D"]
+
+[node name="Bedroll" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.90162, 0, -1.52963)
+mesh = ExtResource("334_q74ou")
+
+[node name="Bucket" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.955112, 0, -1.61807)
+mesh = ExtResource("341_a6b2d")
+
+[node name="Campfire-pit" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.52775, 0, 0.279193)
+mesh = ExtResource("343_yjp66")
+
+[node name="Campfire-stand" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.56313, 0, -1.62232)
+mesh = ExtResource("344_n371w")
+
+[node name="Chest" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.426374, 0, -1.526)
+mesh = ExtResource("345_bcvfk")
+
+[node name="Fence-doorway" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7962, 0, 0.279193)
+mesh = ExtResource("346_4ecuu")
+
+[node name="Fence-fortified" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.64197, 0, 0.279193)
+mesh = ExtResource("347_setm5")
+
+[node name="Fence" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8014, 0, 0.279193)
+mesh = ExtResource("348_ubxqo")
+
+[node name="Fish-large" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.73866, 0, -1.61356)
+mesh = ExtResource("349_lneuh")
+
+[node name="Fish" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.78665, -0.158152, -1.43113)
+mesh = ExtResource("350_4hbhv")
+
+[node name="Floor-hole" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.24272, 0, -1.60645)
+mesh = ExtResource("351_n5a6j")
+
+[node name="Floor-old" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.26999, 0, -1.63939)
+mesh = ExtResource("352_0gqee")
+
+[node name="Floor" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.45465, 0.00647163, -1.58195)
+mesh = ExtResource("353_5wvk1")
+
+[node name="Grass-large" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6402, 0, -1.59906)
+mesh = ExtResource("354_8t6qc")
+
+[node name="Grass2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.96295, 0, 0.279193)
+mesh = ExtResource("355_5bm7v")
+
+[node name="Resource-planks" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.66585, 0.00647163, -1.58432)
+mesh = ExtResource("363_lt5jn")
+
+[node name="Resource-wood" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5251, 0, 0.279193)
+mesh = ExtResource("366_j3kqx")
+
+[node name="Rock-a" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.20092, 0, -1.44994)
+mesh = ExtResource("367_8t2y4")
+
+[node name="Rock-b" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.139903, 0, 2.06123)
+mesh = ExtResource("368_t0tle")
+
+[node name="Rock-c" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.89738, 0, -1.51126)
+mesh = ExtResource("369_0n11p")
+
+[node name="Signpost-single" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.31589, 0, 2.02014)
+mesh = ExtResource("375_6vige")
+
+[node name="Signpost" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.73493, 0, -1.42717)
+mesh = ExtResource("376_fppnh")
+
+[node name="Structure-canvas" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.68366, 0, 1.92508)
+mesh = ExtResource("377_pggmr")
+
+[node name="Structure-floor" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.85857, 0, 2.13151)
+mesh = ExtResource("378_ohvkk")
+
+[node name="Structure-roof" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.02132, 0, 2.18352)
+mesh = ExtResource("384_w4yuv")
+
+[node name="Structure" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.77383, 0, 2.12172)
+mesh = ExtResource("385_d1tjc")
+
+[node name="Tent-canvas-half" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.6268, 0, 2.03173)
+mesh = ExtResource("386_xcvsy")
+
+[node name="Tent-canvas" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.73344, 0, 1.9777)
+mesh = ExtResource("387_vvl7o")
+
+[node name="Tent" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8323, 0, 2.07721)
+mesh = ExtResource("388_h3teb")
+
+[node name="Tool-axe-upgraded" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.48429, 1.19209e-07, -1.53877)
+mesh = ExtResource("389_eb80r")
+
+[node name="Tool-axe" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.21753, 0.00184721, 0.281642)
+mesh = ExtResource("390_142v5")
+
+[node name="Tool-hammer-upgraded" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.39456, 0, -1.66936)
+mesh = ExtResource("391_w3ley")
+
+[node name="Tool-hammer" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.00628, 0, -1.6225)
+mesh = ExtResource("392_gnq8h")
+
+[node name="Tool-hoe-upgraded" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.96706, 0, -1.41203)
+mesh = ExtResource("393_4tq7r")
+
+[node name="Tool-hoe" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.70127, 0, 0.280634)
+mesh = ExtResource("394_kdr03")
+
+[node name="Tool-pickaxe-upgraded" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.69655, 0, -1.64336)
+mesh = ExtResource("395_lbi5m")
+
+[node name="Tool-pickaxe" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.97813, -0.0369234, 0.288905)
+mesh = ExtResource("396_nv8gh")
+
+[node name="Tool-shovel-upgraded" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.76622, 0, -1.38991)
+mesh = ExtResource("397_nv1yk")
+
+[node name="Tool-shovel" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.33422, 0, 0.279193)
+mesh = ExtResource("398_l1vml")
+
+[node name="Tree-autumn-trunk" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.52598, -0.0139892, 0.251838)
+mesh = ExtResource("400_0tus2")
+
+[node name="Tree-autumn" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.83724, 0, 0.279193)
+mesh = ExtResource("401_xq8cf")
+
+[node name="Tree-log-small" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.51217, 0, -1.50705)
+mesh = ExtResource("402_se5ne")
+
+[node name="Tree-log" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.639935, 0, -1.43011)
+mesh = ExtResource("403_tuwxs")
+
+[node name="Tree-tall" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.366441, -0.00901055, 0.284479)
+mesh = ExtResource("404_0r88f")
+
+[node name="Tree-trunk" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.759516, 0, 0.279193)
+mesh = ExtResource("405_jeia8")
+
+[node name="Tree" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.667849, 0, 0.279193)
+mesh = ExtResource("406_0456x")
+
+[node name="Workbench-anvil" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.92644, 0, -1.43151)
+mesh = ExtResource("407_ukkt3")
+
+[node name="Workbench-grind" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33509, 0, 0.279193)
+mesh = ExtResource("408_1u2wl")
+
+[node name="Workbench" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.67508, 0, 0.279193)
+mesh = ExtResource("409_gf7vh")
+
+[node name="Barrel2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.06735, 0, 1.93359)
+mesh = ExtResource("411_lsfs1")
+
+[node name="Chest2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.99903, 4.76837e-07, 1.81448)
+mesh = ExtResource("412_k15kd")
+
+[node name="Rocks" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.05334, 0, 0.25101)
+mesh = ExtResource("419_knoyq")
+
+[node name="Stairs" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.39487, 0, 0.254373)
+mesh = ExtResource("420_khd4c")
+
+[node name="Stones" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.44585, 0, 2.05018)
+mesh = ExtResource("421_rdubp")
+
+[node name="Wood-structure" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.81843, 0, 0.254373)
+mesh = ExtResource("427_gl3ti")
+
+[node name="Wood-support" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.35343, 0, 0.254373)
+mesh = ExtResource("428_ul146")
+
+[node name="Unit-ship-large" type="MeshInstance3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -4.19171, 0, 2.30341)
+mesh = ExtResource("164_cvdmp")
+
+[node name="Unit-ship" type="MeshInstance3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -2.12724, 0, 2.19877)
+mesh = ExtResource("165_0k53k")
+
+[node name="Unit-tree" type="MeshInstance3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -2.77742, 2.38419e-07, 0.252529)
+mesh = ExtResource("167_ou35g")
