@@ -1,4 +1,12 @@
 extends Control
+@onready var menu1 = $AudioStreamPlayer
+func stop_my_music():
+	menu1.stop()
+func start_my_music():
+	menu1.play()
+	
+func _ready():
+	menu1.play()
 
 func _input(event):
 	if event is InputEventKey and event.pressed:

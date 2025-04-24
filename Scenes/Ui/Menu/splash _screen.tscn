@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://88pct6kr5dip"]
+[gd_scene load_steps=42 format=3 uid="uid://88pct6kr5dip"]
 
 [ext_resource type="Script" uid="uid://bq0u0husc1gsj" path="res://Scripts/splash__screen.gd" id="1_on01i"]
 [ext_resource type="Texture2D" uid="uid://bc46eayhty4ea" path="res://styles/Img/Menu/Splash/slap.png" id="2_ujrah"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cd5j166bwvxxv" path="res://styles/Img/Menu/Splash/cloud3.png" id="5_on01i"]
 [ext_resource type="Texture2D" uid="uid://b0qfujq2nh8ob" path="res://styles/Img/Menu/Splash/cloud2.png" id="6_lmx1b"]
 [ext_resource type="Texture2D" uid="uid://5fcgj3nr3a67" path="res://styles/Img/Menu/Splash/cloud1.png" id="7_5bjsw"]
+[ext_resource type="AudioStream" uid="uid://5c1ux5h837kj" path="res://styles/Songs/intro.mp3" id="8_lmx1b"]
 
 [sub_resource type="Animation" id="Animation_13f0l"]
 length = 0.001
@@ -25,7 +26,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_11u1b"]
 resource_name = "slap1"
-length = 5.0
+length = 6.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -33,7 +34,7 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(1, 4.81),
+"times": PackedFloat32Array(2, 5.86667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(-569, -443), Vector2(-569, -135)]
@@ -126,7 +127,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_ee0gw"]
 resource_name = "bird"
-length = 5.0
+length = 6.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -134,10 +135,10 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1, 4),
+"times": PackedFloat32Array(0, 2, 5.03333),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(1169, 279), Vector2(1000, 279), Vector2(450, 659)]
+"values": [Vector2(1169, 279), Vector2(860, 279), Vector2(450, 659)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_lmx1b"]
@@ -163,7 +164,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_lmx1b"]
 resource_name = "slap2"
-length = 5.0
+length = 6.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -171,7 +172,7 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(1, 5),
+"times": PackedFloat32Array(2, 5.96667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(0, 286), Vector2(0, 963)]
@@ -352,7 +353,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_apu0l"]
 resource_name = "clouds"
-length = 5.0
+length = 6.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -360,7 +361,7 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(1.03333, 4.7, 5),
+"times": PackedFloat32Array(2, 5.6, 6),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(-21, -200), Vector2(-21, 120), Vector2(-21, 120)]
@@ -397,9 +398,9 @@ autoplay = "slap1"
 
 [node name="bird" type="BoxContainer" parent="."]
 layout_mode = 0
-offset_left = 1169.0
+offset_left = 860.0
 offset_top = 279.0
-offset_right = 1262.0
+offset_right = 953.0
 offset_bottom = 370.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="bird"]
@@ -438,9 +439,9 @@ autoplay = "slap2"
 [node name="BoxContainer" type="TextureRect" parent="."]
 layout_mode = 0
 offset_left = -21.0
-offset_top = -200.0
+offset_top = 120.0
 offset_right = 1259.0
-offset_bottom = 213.0
+offset_bottom = 533.0
 
 [node name="cloud1" type="TextureRect" parent="BoxContainer"]
 layout_mode = 0
@@ -506,3 +507,6 @@ libraries = {
 &"": SubResource("AnimationLibrary_uych3")
 }
 autoplay = "clouds"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_lmx1b")

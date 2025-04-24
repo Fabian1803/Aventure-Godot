@@ -1,13 +1,15 @@
-[gd_scene load_steps=23 format=3 uid="uid://byak6ds4er83l"]
+[gd_scene load_steps=25 format=3 uid="uid://byak6ds4er83l"]
 
 [ext_resource type="Script" uid="uid://cfcfch2gewb" path="res://Scripts/menu_screen.gd" id="1_54gvs"]
 [ext_resource type="Texture2D" uid="uid://7vtntnas0lpv" path="res://styles/Img/Menu/Button/cap.png" id="2_22oqj"]
 [ext_resource type="Theme" uid="uid://dylivt6vsw3y3" path="res://styles/Ttf/Theme.tres" id="2_q5u2w"]
 [ext_resource type="Texture2D" uid="uid://d0wi6vi505xtp" path="res://styles/Img/Menu/Button/buttons.jpeg" id="3_22oqj"]
 [ext_resource type="PackedScene" uid="uid://ddma6v4cyduy0" path="res://Scenes/Ui/Menu/new_screen.tscn" id="5_lhu8k"]
+[ext_resource type="AudioStream" uid="uid://btpfotmvfu3ex" path="res://styles/Songs/button2.mp3" id="5_xpb86"]
 [ext_resource type="Texture2D" uid="uid://yaqc2magj878" path="res://styles/Img/Menu/Button/button2.png" id="6_sx6ar"]
 [ext_resource type="Texture2D" uid="uid://b7tqa2v27y7x6" path="res://styles/Img/Menu/Button/button1.png" id="7_xpb86"]
 [ext_resource type="Texture2D" uid="uid://chcddmskwsalx" path="res://styles/Img/Menu/Button/equit.PNG" id="8_th61u"]
+[ext_resource type="AudioStream" uid="uid://dwe2ie7lg4dus" path="res://styles/Songs/menu2.mp3" id="10_th61u"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gtpy4"]
 texture = ExtResource("3_22oqj")
@@ -193,6 +195,9 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_xpb86")
 theme_override_styles/normal = SubResource("StyleBoxTexture_th61u")
 text = "Salir"
 
+[node name="AudioButton" type="AudioStreamPlayer" parent="VBoxContainer"]
+stream = ExtResource("5_xpb86")
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_lhu8k")
@@ -228,7 +233,11 @@ alignment = 1
 layout_mode = 2
 texture = ExtResource("8_th61u")
 
+[node name="AudioNewPanel" type="AudioStreamPlayer" parent="NewScreen"]
+stream = ExtResource("10_th61u")
+
 [connection signal="pressed" from="VBoxContainer/Button_new" to="." method="_on_button_star_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button_load" to="." method="_on_button_load_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button_settings" to="." method="_on_button_settings_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button_exit" to="." method="_on_button_exit_pressed"]
 [connection signal="pressed" from="NewScreen/Button_new_exit" to="." method="_on_button_star_exit_pressed"]

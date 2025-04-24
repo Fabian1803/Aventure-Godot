@@ -1,0 +1,50 @@
+[gd_scene load_steps=9 format=3 uid="uid://kv0d6o06u0wc"]
+
+[ext_resource type="PackedScene" uid="uid://ddw4ucg6gxxpu" path="res://styles/Models/OBJ character/character-male-b.fbx" id="1_51kbv"]
+[ext_resource type="Script" uid="uid://v02ftei5xwpa" path="res://Scenes/Characters/character_male_b.gd" id="2_tv7yv"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_tv7yv"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_tv7yv"]
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_8xc1f"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_w20ck"]
+animation = &"jump"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_6du4m"]
+animation = &"sprint"
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_fu244"]
+graph_offset = Vector2(-208.659, 45.0703)
+nodes/Idle/node = SubResource("AnimationNodeAnimation_tv7yv")
+nodes/Idle/position = Vector2(260, 140)
+nodes/Jump/node = SubResource("AnimationNodeAdd2_tv7yv")
+nodes/Jump/position = Vector2(800, 60)
+nodes/Run/node = SubResource("AnimationNodeAdd2_8xc1f")
+nodes/Run/position = Vector2(559.02, 35.09)
+nodes/jump/node = SubResource("AnimationNodeAnimation_w20ck")
+nodes/jump/position = Vector2(640, 340)
+nodes/output/position = Vector2(1060, 80)
+nodes/run/node = SubResource("AnimationNodeAnimation_6du4m")
+nodes/run/position = Vector2(360, 320)
+node_connections = [&"Jump", 0, &"Run", &"Jump", 1, &"jump", &"Run", 0, &"Idle", &"Run", 1, &"run", &"output", 0, &"Jump"]
+
+[node name="character-male-b" instance=ExtResource("1_51kbv")]
+script = ExtResource("2_tv7yv")
+
+[node name="Skeleton3D" parent="character-male-b" index="0"]
+bones/3/rotation = Quaternion(0.00671063, 0, 0, 0.999977)
+bones/4/position = Vector3(0.0998968, 0.1115, 0.0115)
+bones/4/rotation = Quaternion(0, 0, -0.376337, 0.926483)
+bones/5/position = Vector3(-0.0998968, 0.1115, 0.0115)
+bones/5/rotation = Quaternion(0, 0, 0.376337, 0.926483)
+bones/6/position = Vector3(0, 0.167, 0.0263888)
+bones/6/rotation = Quaternion(0, -0.00671063, 0, 0.999977)
+
+[node name="AnimationTree" type="AnimationTree" parent="." index="2"]
+tree_root = SubResource("AnimationNodeBlendTree_fu244")
+anim_player = NodePath("../AnimationPlayer")
+parameters/Jump/add_amount = 0.0
+parameters/Run/add_amount = 0.0
