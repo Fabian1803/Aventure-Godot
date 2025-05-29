@@ -1,0 +1,63 @@
+[gd_scene load_steps=5 format=3 uid="uid://cyqbah4tqx4xx"]
+
+[ext_resource type="Script" uid="uid://bldpw7q8bmxue" path="res://Scenes/Items/Flag/flag_fade.gd" id="1_jcuro"]
+
+[sub_resource type="Animation" id="Animation_jcuro"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_v1h3p"]
+resource_name = "fade_out"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.33, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_x2vyk"]
+_data = {
+&"RESET": SubResource("Animation_jcuro"),
+&"fade_out": SubResource("Animation_v1h3p")
+}
+
+[node name="FlagFade" type="Control"]
+layout_mode = 3
+anchor_left = -0.297
+anchor_top = -0.378
+offset_left = 342.144
+offset_top = 244.944
+script = ExtResource("1_jcuro")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = -80.0
+offset_top = -32.0
+offset_right = 1247.0
+offset_bottom = 679.0
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_x2vyk")
+}

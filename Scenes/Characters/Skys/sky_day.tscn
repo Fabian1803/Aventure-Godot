@@ -1,0 +1,62 @@
+[gd_scene load_steps=14 format=3 uid="uid://bkkjwt55ty7rc"]
+
+[ext_resource type="Shader" uid="uid://tggny7p0jduk" path="res://styles/Shaders/sky_01.gdshader" id="1_7m6ap"]
+
+[sub_resource type="Gradient" id="Gradient_qpkg7"]
+offsets = PackedFloat32Array(0.511628, 0.52093)
+colors = PackedColorArray(0.772549, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_734by"]
+gradient = SubResource("Gradient_qpkg7")
+fill_from = Vector2(0.457265, 1)
+fill_to = Vector2(0.444444, 0)
+
+[sub_resource type="Gradient" id="Gradient_40jx5"]
+offsets = PackedFloat32Array(0.502326, 0.525581)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_u61mr"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_mqxpk"]
+width = 256
+height = 2048
+in_3d_space = true
+seamless = true
+color_ramp = SubResource("Gradient_40jx5")
+noise = SubResource("FastNoiseLite_u61mr")
+
+[sub_resource type="Gradient" id="Gradient_lrg5i"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_dx00a"]
+gradient = SubResource("Gradient_lrg5i")
+
+[sub_resource type="Gradient" id="Gradient_a5tto"]
+colors = PackedColorArray(0.286699, 0.501019, 0.999987, 1, 0.67451, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_5vg11"]
+gradient = SubResource("Gradient_a5tto")
+fill_from = Vector2(0.470085, 0)
+fill_to = Vector2(0.525641, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ceh5a"]
+shader = ExtResource("1_7m6ap")
+shader_parameter/hdri_background = SubResource("GradientTexture2D_dx00a")
+shader_parameter/sky_background = SubResource("GradientTexture2D_5vg11")
+shader_parameter/clouds = SubResource("NoiseTexture2D_mqxpk")
+shader_parameter/cloud_color = SubResource("GradientTexture2D_734by")
+shader_parameter/exposure = 1.0
+
+[sub_resource type="Sky" id="Sky_qpkg7"]
+sky_material = SubResource("ShaderMaterial_ceh5a")
+
+[sub_resource type="Environment" id="Environment_40jx5"]
+background_mode = 2
+sky = SubResource("Sky_qpkg7")
+
+[node name="SkyDay" type="WorldEnvironment"]
+environment = SubResource("Environment_40jx5")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+light_color = Color(0.484283, 0.462393, 0.338532, 1)
+sky_mode = 1

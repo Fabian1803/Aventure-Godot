@@ -1,9 +1,77 @@
-[gd_scene format=3 uid="uid://dvsn1tp45lerp"]
+[gd_scene load_steps=5 format=3 uid="uid://dvsn1tp45lerp"]
+
+[ext_resource type="Script" uid="uid://bwnqy0b62w6h5" path="res://Scripts/user_screen.gd" id="1_h6y5c"]
+[ext_resource type="Texture2D" uid="uid://bwk23ffbhftrk" path="res://styles/Img/Menu/Panel/life.png" id="1_xnb83"]
+[ext_resource type="Texture2D" uid="uid://0fdewonsevlv" path="res://styles/Img/Menu/Panel/coin.png" id="2_dia74"]
+[ext_resource type="Texture2D" uid="uid://0tp8njqp4pad" path="res://styles/Img/Menu/Panel/Time.png" id="3_dia74"]
 
 [node name="UserScreen" type="Control"]
 layout_mode = 3
-anchors_preset = 15
+anchors_preset = 0
+script = ExtResource("1_h6y5c")
+
+[node name="Life" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 539.0
+offset_right = 137.0
+offset_bottom = 619.0
+
+[node name="TextureRect" type="TextureRect" parent="Life"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+texture = ExtResource("1_xnb83")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="Life"]
+layout_mode = 2
+text = "x1"
+
+[node name="Coin" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_left = 1013.0
+offset_top = 536.0
+offset_right = 1116.0
+offset_bottom = 616.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Label" type="TextureRect" parent="Coin"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+texture = ExtResource("2_dia74")
+expand_mode = 1
+
+[node name="Label2" type="Label" parent="Coin"]
+layout_mode = 2
+text = "99"
+
+[node name="Time" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 499.0
+offset_top = 11.0
+offset_right = 660.0
+offset_bottom = 81.0
+
+[node name="TextureRect" type="TextureRect" parent="Time"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+texture = ExtResource("3_dia74")
+expand_mode = 1
+
+[node name="Label2" type="Label" parent="Time"]
+layout_mode = 2
+text = "8:00"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+offset_right = 1152.0
+offset_bottom = 648.0
+text = "+"
+horizontal_alignment = 1
+vertical_alignment = 1

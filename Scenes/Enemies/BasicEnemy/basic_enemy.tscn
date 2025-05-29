@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://1c5t4kp1jhy7"]
+
+[ext_resource type="Script" uid="uid://dncy7xptkltcb" path="res://Scenes/Enemies/BasicEnemy/basic_enemy.gd" id="1_nxd6k"]
+[ext_resource type="PackedScene" uid="uid://dlrv8030x1p2o" path="res://Scenes/Enemies/ModelFtx/Zombie/character_zombie.tscn" id="2_hsin2"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_f04ye"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_nxd6k"]
+radius = 6.0
+
+[node name="BasicEnemy" type="CharacterBody3D"]
+script = ExtResource("1_nxd6k")
+velocidad = 100.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_f04ye")
+debug_color = Color(0.966197, 8.66354e-07, 0.482028, 0.42)
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("CylinderShape3D_nxd6k")
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0, -0.153846, -0.0534487)
+
+[node name="character-zombie" parent="." instance=ExtResource("2_hsin2")]
+transform = Transform3D(-2.3, 0, -3.4729e-07, 0, 2.3, 0, 3.4729e-07, 0, -2.3, 0, -0.907935, 0)
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]

@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://4bih5lih3w0p"]
+
+[ext_resource type="Script" uid="uid://m0o5cgq3qkrm" path="res://Scenes/Items/Flag/flag.gd" id="1_13043"]
+[ext_resource type="PackedScene" uid="uid://bf37u5atx8knq" path="res://styles/Models/FBX1 format/flag-pirate-high-pennant.fbx" id="1_aagun"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_13043"]
+height = 3.83032
+
+[node name="Flag" type="Area3D"]
+script = ExtResource("1_13043")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.91516, 0)
+shape = SubResource("CylinderShape3D_13043")
+
+[node name="flag-pirate-high-pennant" parent="." instance=ExtResource("1_aagun")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.023056, 0, 0.00821018)

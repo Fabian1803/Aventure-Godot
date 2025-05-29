@@ -1,0 +1,72 @@
+[gd_scene load_steps=11 format=3 uid="uid://dlrv8030x1p2o"]
+
+[ext_resource type="PackedScene" uid="uid://4b7ls80qdc4p" path="res://styles/Models/EnemyFtx/character-zombie.fbx" id="1_ylkdd"]
+[ext_resource type="Script" uid="uid://dlsql0vydsh03" path="res://Scenes/Enemies/ModelFtx/Zombie/character_zombie.gd" id="2_488gb"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_lk405"]
+animation = &"fall"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_488gb"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_x378y"]
+animation = &"jump"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ylkdd"]
+animation = &"walk"
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_0a8xw"]
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_qgy1b"]
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_r5e3g"]
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_tqimg"]
+graph_offset = Vector2(-289.3, 8.81729)
+nodes/Fall/node = SubResource("AnimationNodeAnimation_lk405")
+nodes/Fall/position = Vector2(640, 460)
+nodes/Idle/node = SubResource("AnimationNodeAnimation_488gb")
+nodes/Idle/position = Vector2(-20, 220)
+nodes/Jump/node = SubResource("AnimationNodeAnimation_x378y")
+nodes/Jump/position = Vector2(400, 420)
+nodes/Walk/node = SubResource("AnimationNodeAnimation_ylkdd")
+nodes/Walk/position = Vector2(80, 440)
+nodes/fall/node = SubResource("AnimationNodeAdd2_0a8xw")
+nodes/fall/position = Vector2(880, 160)
+nodes/jump/node = SubResource("AnimationNodeAdd2_qgy1b")
+nodes/jump/position = Vector2(600, 140)
+nodes/output/position = Vector2(1140, 160)
+nodes/walk/node = SubResource("AnimationNodeAdd2_r5e3g")
+nodes/walk/position = Vector2(260, 140)
+node_connections = [&"fall", 0, &"jump", &"fall", 1, &"Fall", &"jump", 0, &"walk", &"jump", 1, &"Jump", &"output", 0, &"fall", &"walk", 0, &"Idle", &"walk", 1, &"Walk"]
+
+[node name="character-zombie" instance=ExtResource("1_ylkdd")]
+script = ExtResource("2_488gb")
+
+[node name="root" parent="character_zombie" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.99761, 0)
+
+[node name="torso" parent="character_zombie/root" index="0"]
+transform = Transform3D(0.620813, 0, -0.783958, -0.0158963, 0.999794, -0.0125882, 0.783797, 0.020277, 0.620686, 6.2917e-14, -9.72562, 3.14585e-14)
+
+[node name="arm_left" parent="character_zombie/root/torso" index="0"]
+transform = Transform3D(0.289421, 0.778413, 0.557053, -0.625125, 0.594424, -0.505845, -0.724882, -0.201825, 0.658644, 0.15, 0.2, 0.0025)
+
+[node name="arm_right" parent="character_zombie/root/torso" index="1"]
+transform = Transform3D(0.289421, -0.778413, 0.557053, 0.625125, 0.594423, 0.505845, -0.724882, 0.201825, 0.658644, -0.15, 0.2, 0.0025)
+
+[node name="head" parent="character_zombie/root/torso" index="2"]
+transform = Transform3D(0.0567712, 0, -0.998387, 0, 1, 0, 0.998387, 0, 0.0567712, 6.2917e-14, -11.3299, 0)
+
+[node name="leg_right" parent="character_zombie/root" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.709477, -0.704728, 0, 0.704728, 0.709477, 3.23354, -9.72566, -0.00012)
+
+[node name="leg_left" parent="character_zombie/root" index="2"]
+transform = Transform3D(1, 0, 0, 0, 0.71438, 0.699758, 0, -0.699758, 0.71438, -3.2335, -9.72564, -0.001156)
+
+[node name="Ani" type="AnimationTree" parent="." index="2"]
+tree_root = SubResource("AnimationNodeBlendTree_tqimg")
+anim_player = NodePath("../AnimationPlayer")
+parameters/fall/add_amount = false
+parameters/jump/add_amount = 0.0133333
+parameters/walk/add_amount = -44.59

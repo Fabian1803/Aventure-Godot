@@ -1,0 +1,80 @@
+[gd_scene load_steps=15 format=3 uid="uid://kv0d6o06u0wc"]
+
+[ext_resource type="PackedScene" uid="uid://ddw4ucg6gxxpu" path="res://styles/Models/OBJ character/character-male-b.fbx" id="1_51kbv"]
+[ext_resource type="Script" uid="uid://v02ftei5xwpa" path="res://Scenes/Characters/character_male_b.gd" id="2_tv7yv"]
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_fu244"]
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_tv7yv"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_tv7yv"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_6du4m"]
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_8xc1f"]
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_w20ck"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_8xc1f"]
+animation = &"die"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_w20ck"]
+animation = &"fall"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_72uke"]
+animation = &"jump"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_6du4m"]
+animation = &"sprint"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_fu244"]
+animation = &"walk"
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_fu244"]
+graph_offset = Vector2(387.202, 158.885)
+nodes/Die/node = SubResource("AnimationNodeAdd2_fu244")
+nodes/Die/position = Vector2(1260, 40)
+nodes/Fall/node = SubResource("AnimationNodeAdd2_tv7yv")
+nodes/Fall/position = Vector2(960, 40)
+nodes/Idle/node = SubResource("AnimationNodeAnimation_tv7yv")
+nodes/Idle/position = Vector2(40, 120)
+nodes/Jump/node = SubResource("AnimationNodeAdd2_6du4m")
+nodes/Jump/position = Vector2(760, 40)
+nodes/Run/node = SubResource("AnimationNodeAdd2_8xc1f")
+nodes/Run/position = Vector2(559.02, 35.09)
+nodes/Walk/node = SubResource("AnimationNodeAdd2_w20ck")
+nodes/Walk/position = Vector2(340, 40)
+nodes/die/node = SubResource("AnimationNodeAnimation_8xc1f")
+nodes/die/position = Vector2(1060, 320)
+nodes/fall/node = SubResource("AnimationNodeAnimation_w20ck")
+nodes/fall/position = Vector2(820, 360)
+nodes/jump/node = SubResource("AnimationNodeAnimation_72uke")
+nodes/jump/position = Vector2(580, 340)
+nodes/output/position = Vector2(1540, 60)
+nodes/run/node = SubResource("AnimationNodeAnimation_6du4m")
+nodes/run/position = Vector2(360, 320)
+nodes/walk/node = SubResource("AnimationNodeAnimation_fu244")
+nodes/walk/position = Vector2(120, 300)
+node_connections = [&"Die", 0, &"Fall", &"Die", 1, &"die", &"Fall", 0, &"Jump", &"Fall", 1, &"fall", &"Jump", 0, &"Run", &"Jump", 1, &"jump", &"Run", 0, &"Walk", &"Run", 1, &"run", &"Walk", 0, &"Idle", &"Walk", 1, &"walk", &"output", 0, &"Die"]
+
+[node name="character-male-b" instance=ExtResource("1_51kbv")]
+script = ExtResource("2_tv7yv")
+
+[node name="Skeleton3D" parent="character-male-b" index="0"]
+bones/3/rotation = Quaternion(0.030692, 0, 0, 0.999529)
+bones/4/position = Vector3(0.0998968, 0.1115, 0.0115)
+bones/4/rotation = Quaternion(0, 0, -0.30942, 0.950926)
+bones/5/position = Vector3(-0.0998968, 0.1115, 0.0115)
+bones/5/rotation = Quaternion(0, 0, 0.30942, 0.950926)
+bones/6/position = Vector3(0, 0.167, 0.0263888)
+bones/6/rotation = Quaternion(0, -0.030692, 0, 0.999529)
+
+[node name="AnimationTree" type="AnimationTree" parent="." index="2"]
+tree_root = SubResource("AnimationNodeBlendTree_fu244")
+anim_player = NodePath("../AnimationPlayer")
+parameters/Die/add_amount = false
+parameters/Fall/add_amount = 0.0
+parameters/Jump/add_amount = false
+parameters/Run/add_amount = 0.0
+parameters/Walk/add_amount = false

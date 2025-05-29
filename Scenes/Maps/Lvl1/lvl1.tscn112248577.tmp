@@ -1,0 +1,50 @@
+[gd_scene load_steps=11 format=3 uid="uid://d212gdqwgicyd"]
+
+[ext_resource type="PackedScene" uid="uid://mhjuyvdo8ob2" path="res://Scenes/Maps/Lvl1/map _lvl1.tscn" id="1_wnil3"]
+[ext_resource type="PackedScene" uid="uid://ypm2i2of2v1r" path="res://Scenes/World/ocean.tscn" id="2_jid7n"]
+[ext_resource type="PackedScene" uid="uid://dyivdbp1uwlt1" path="res://Scenes/Characters/player.tscn" id="3_jid7n"]
+[ext_resource type="PackedScene" uid="uid://bkkjwt55ty7rc" path="res://Scenes/Characters/Skys/sky_day.tscn" id="4_c0qi2"]
+[ext_resource type="PackedScene" uid="uid://bnjgwocmgknlh" path="res://Scenes/Items/Life/life_item.tscn" id="5_lws33"]
+[ext_resource type="PackedScene" uid="uid://1c5t4kp1jhy7" path="res://Scenes/Enemies/BasicEnemy/basic_enemy.tscn" id="6_gwyb3"]
+[ext_resource type="PackedScene" uid="uid://b0h7t53in8k4k" path="res://Scenes/Items/Box/box.tscn" id="7_wccon"]
+[ext_resource type="PackedScene" uid="uid://4bih5lih3w0p" path="res://Scenes/Items/Flag/flag.tscn" id="8_apjpk"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_c0qi2"]
+size = Vector3(10, 1, 10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lws33"]
+size = Vector3(10, 1, 10)
+
+[node name="Lvl1" type="Node3D"]
+
+[node name="MapLvl1" parent="." instance=ExtResource("1_wnil3")]
+
+[node name="Ocean" parent="." instance=ExtResource("2_jid7n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.22052, 0)
+
+[node name="Player" parent="." instance=ExtResource("3_jid7n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.195463, 2.45338, 7.93499)
+
+[node name="SkyDay" parent="." instance=ExtResource("4_c0qi2")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10.6585)
+mesh = SubResource("BoxMesh_c0qi2")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+shape = SubResource("BoxShape3D_lws33")
+
+[node name="LifeItem" parent="." instance=ExtResource("5_lws33")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.60311, 15.7808, 2.52853)
+
+[node name="BasicEnemy" parent="." instance=ExtResource("6_gwyb3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.4421, 2.46599, 3.38506)
+velocidad = 30.0
+
+[node name="Box" parent="." instance=ExtResource("7_wccon")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.029201, 7.95683, -2.38748)
+
+[node name="Flag" parent="." instance=ExtResource("8_apjpk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.35758, 1, -2.56714)

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bnjgwocmgknlh"]
+
+[ext_resource type="PackedScene" uid="uid://djb13mj77clhu" path="res://styles/Models/FBX1 format/heart.fbx" id="1_a5nlt"]
+[ext_resource type="Script" uid="uid://bgqx0oc6yfnbq" path="res://Scenes/Items/Life/life_item.gd" id="1_c4t5q"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_c4t5q"]
+
+[node name="LifeItem" type="Area3D" groups=["player"]]
+script = ExtResource("1_c4t5q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0067797, 0.568707, -0.00972843)
+shape = SubResource("SphereShape3D_c4t5q")
+
+[node name="heart" parent="." instance=ExtResource("1_a5nlt")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 0, 0)
+
+[node name="RayCast3D" type="RayCast3D" parent="."]

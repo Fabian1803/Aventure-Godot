@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://dyivdbp1uwlt1"]
+
+[ext_resource type="Script" uid="uid://7qeukwdiq187" path="res://Scripts/player.gd" id="1_3etf2"]
+[ext_resource type="PackedScene" uid="uid://kv0d6o06u0wc" path="res://Scenes/Characters/character_male_b.tscn" id="2_40svl"]
+[ext_resource type="Script" uid="uid://bfycxvms7ha2d" path="res://Scripts/spring_arm_3d.gd" id="3_al8ar"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_al8ar"]
+radius = 0.774674
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_3etf2")
+
+[node name="character-male-b" parent="." instance=ExtResource("2_40svl")]
+transform = Transform3D(-2.5, 0, -3.77489e-07, 0, 2.5, 0, 3.77489e-07, 0, -2.5, 0.01, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.755927, 0)
+shape = SubResource("CapsuleShape3D_al8ar")
+
+[node name="SpringArm3D" type="SpringArm3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 1.16917, 0)
+spring_length = 4.0
+script = ExtResource("3_al8ar")
+max_vertical_angle = 0.84823
+
+[node name="Camera3D" type="Camera3D" parent="SpringArm3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.529152, 3.72698)
+current = true
