@@ -134,6 +134,10 @@ offset_top = 18.0
 offset_right = 1120.0
 offset_bottom = 87.0
 theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxTexture_xccyk")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_xccyk")
+theme_override_styles/hover = SubResource("StyleBoxTexture_xccyk")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_xccyk")
 theme_override_styles/normal = SubResource("StyleBoxTexture_xccyk")
 text = "II"
 
@@ -143,3 +147,4 @@ light_mask = 3
 
 [connection signal="pressed" from="tabs/ButtonJump" to="." method="_on_button_jump_pressed"]
 [connection signal="toggled" from="tabs/ButtonSprint" to="." method="_on_button_sprint_toggled"]
+[connection signal="pressed" from="tabs/ButtonStop" to="." method="_on_button_stop_pressed"]

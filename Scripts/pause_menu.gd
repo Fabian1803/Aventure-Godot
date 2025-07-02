@@ -14,12 +14,10 @@ func toggle_pause():
 	get_tree().paused = is_paused  ## Pausa o reanuda el juego
 	visible = is_paused  ## Muestra u oculta el menú de pausa
 	## Manejo del cursor y el crosshair
-	if is_paused:
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)  
+	if is_paused: 
 		if crosshair:
 			crosshair.hide()
 	else:
-		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)  
 		if crosshair:
 			crosshair.show()
 

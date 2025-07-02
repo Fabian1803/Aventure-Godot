@@ -80,41 +80,41 @@ anchor_bottom = 0.5
 offset_left = -134.0
 offset_top = 13.0
 offset_right = 134.0
-offset_bottom = 171.0
+offset_bottom = 235.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="ButtonContinuar" type="Button" parent="VBoxContainer"]
-custom_minimum_size = Vector2(0, 50)
+custom_minimum_size = Vector2(0, 80)
 layout_mode = 2
 theme = ExtResource("3_e526i")
 theme_override_colors/font_hover_color = Color(0.811765, 0.443137, 0.282353, 1)
 theme_override_colors/font_color = Color(0.717647, 0.372549, 0.223529, 1)
-theme_override_font_sizes/font_size = 28
+theme_override_font_sizes/font_size = 35
 theme_override_styles/hover = SubResource("StyleBoxTexture_lp25f")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_lp25f")
 theme_override_styles/normal = SubResource("StyleBoxTexture_uby2b")
 text = "Continuar"
 
 [node name="ButtonAjustes" type="Button" parent="VBoxContainer"]
-custom_minimum_size = Vector2(0, 50)
+custom_minimum_size = Vector2(0, 80)
 layout_mode = 2
 theme = ExtResource("3_e526i")
 theme_override_colors/font_hover_color = Color(0.811765, 0.443137, 0.282353, 1)
 theme_override_colors/font_color = Color(0.717647, 0.372549, 0.223529, 1)
-theme_override_font_sizes/font_size = 28
+theme_override_font_sizes/font_size = 35
 theme_override_styles/hover = SubResource("StyleBoxTexture_h3d03")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_h3d03")
 theme_override_styles/normal = SubResource("StyleBoxTexture_h3d03")
 text = "Ajustes"
 
 [node name="ButtonSalir" type="Button" parent="VBoxContainer"]
-custom_minimum_size = Vector2(0, 50)
+custom_minimum_size = Vector2(0, 80)
 layout_mode = 2
 theme = ExtResource("3_e526i")
 theme_override_colors/font_hover_color = Color(0.811765, 0.443137, 0.282353, 1)
 theme_override_colors/font_color = Color(0.717647, 0.372549, 0.223529, 1)
-theme_override_font_sizes/font_size = 28
+theme_override_font_sizes/font_size = 35
 theme_override_styles/hover = SubResource("StyleBoxTexture_alsb7")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_alsb7")
 theme_override_styles/normal = SubResource("StyleBoxTexture_alsb7")

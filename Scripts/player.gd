@@ -22,7 +22,6 @@ var picked_object
 var pull_power = 4
 
 func _ready():
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	print("Vidas iniciales: ", vida_actual)
 
 func _unhandled_input(event):
@@ -115,4 +114,6 @@ func _on_button_sprint_toggled(toggled_on: bool) -> void:
 
 
 func _on_button_stop_pressed() -> void:
-	pass # Replace with function body.
+	var pause_menu = $PauseMenu
+	if pause_menu:
+		pause_menu.toggle_pause()
