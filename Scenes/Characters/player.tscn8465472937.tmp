@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://dyivdbp1uwlt1"]
+[gd_scene load_steps=11 format=3 uid="uid://dyivdbp1uwlt1"]
 
 [ext_resource type="Script" uid="uid://7qeukwdiq187" path="res://Scripts/player.gd" id="1_3etf2"]
 [ext_resource type="PackedScene" uid="uid://kv0d6o06u0wc" path="res://Scenes/Characters/character_male_b.tscn" id="2_40svl"]
@@ -6,28 +6,14 @@
 [ext_resource type="Script" uid="uid://bfycxvms7ha2d" path="res://Scripts/spring_arm_3d.gd" id="3_al8ar"]
 [ext_resource type="Script" uid="uid://68f2cs17pef4" path="res://Scripts/camera_follow.gd" id="4_gy20a"]
 [ext_resource type="PackedScene" uid="uid://bhwgp5d4ni2ae" path="res://Scenes/Ui/Game/pause_menu.tscn" id="5_cqrjx"]
-[ext_resource type="Texture2D" uid="uid://dyiihb35kvp6f" path="res://styles/Img/Menu/IconsMobile/round_damaged_brown_dark.png" id="7_cueqf"]
 [ext_resource type="PackedScene" uid="uid://cyqbah4tqx4xx" path="res://Scenes/Items/Flag/flag_fade.tscn" id="7_utp2y"]
-[ext_resource type="Texture2D" uid="uid://cw641r8w21a0k" path="res://styles/Img/Menu/IconsMobile/tile_0090.png" id="8_01b8d"]
-[ext_resource type="Texture2D" uid="uid://jchmh4nap66" path="res://styles/Img/Menu/IconsMobile/tile_0078.png" id="9_xccyk"]
-[ext_resource type="Script" uid="uid://kiiuso7opa71" path="res://Scripts/joistick.gd" id="10_h1n2f"]
-[ext_resource type="Texture2D" uid="uid://e3wxfjkpll2d" path="res://styles/Img/Menu/IconsMobile/minimap_ring_brown.png" id="11_dxpk4"]
-[ext_resource type="Texture2D" uid="uid://b8e3xelavrx4b" path="res://styles/Img/Menu/IconsMobile/panel_brown_dark.png" id="12_01b8d"]
+[ext_resource type="Texture2D" uid="uid://b7tqa2v27y7x6" path="res://styles/Img/Menu/Button/button1.png" id="7_xo8ps"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_al8ar"]
 radius = 0.774674
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_gy20a"]
 radius = 0.3
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_15c3i"]
-texture = ExtResource("7_cueqf")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yt1oc"]
-texture = ExtResource("7_cueqf")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xccyk"]
-texture = ExtResource("12_01b8d")
 
 [node name="Player" type="CharacterBody3D" groups=["player"]]
 script = ExtResource("1_3etf2")
@@ -64,7 +50,13 @@ lerp_power = 6.0
 
 [node name="tabs" type="Control" parent="."]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1152.0
+offset_bottom = -648.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="ButtonJump" type="Button" parent="tabs"]
 layout_mode = 0
@@ -73,12 +65,12 @@ offset_top = 487.0
 offset_right = 940.0
 offset_bottom = 588.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_15c3i")
-theme_override_styles/hover = SubResource("StyleBoxTexture_15c3i")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_15c3i")
-theme_override_styles/normal = SubResource("StyleBoxTexture_15c3i")
-icon = ExtResource("8_01b8d")
+theme_override_font_sizes/font_size = 50
+text = "O"
+icon = ExtResource("7_xo8ps")
+flat = true
 icon_alignment = 1
+expand_icon = true
 
 [node name="ButtonSprint" type="Button" parent="tabs"]
 layout_mode = 0
@@ -86,56 +78,13 @@ offset_left = 931.0
 offset_top = 391.0
 offset_right = 1035.0
 offset_bottom = 491.0
-theme_override_styles/disabled = SubResource("StyleBoxTexture_yt1oc")
-theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_yt1oc")
-theme_override_styles/hover = SubResource("StyleBoxTexture_yt1oc")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_yt1oc")
-theme_override_styles/normal = SubResource("StyleBoxTexture_yt1oc")
-toggle_mode = true
-icon = ExtResource("9_xccyk")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "+"
+icon = ExtResource("7_xo8ps")
+flat = true
 icon_alignment = 1
-
-[node name="Joistick" type="Control" parent="tabs"]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 210.0
-offset_bottom = 209.0
-script = ExtResource("10_h1n2f")
-
-[node name="SpriteRango" type="TextureRect" parent="tabs/Joistick"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -64.0
-offset_top = -64.0
-offset_right = 64.0
-offset_bottom = 64.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(1.6, 1.6)
-texture = ExtResource("11_dxpk4")
-
-[node name="SpritePalanca" type="TextureRect" parent="tabs/Joistick"]
-layout_mode = 0
-offset_left = 100.0
-offset_top = 100.0
-offset_right = 164.0
-offset_bottom = 164.0
-scale = Vector2(1.4, 1.4)
-texture = ExtResource("7_cueqf")
-
-[node name="ButtonStop" type="Button" parent="tabs"]
-layout_mode = 0
-offset_left = 1047.0
-offset_top = 18.0
-offset_right = 1120.0
-offset_bottom = 87.0
-theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxTexture_xccyk")
-text = "II"
+expand_icon = true
 
 [node name="PauseMenu" parent="." instance=ExtResource("5_cqrjx")]
 visible = false

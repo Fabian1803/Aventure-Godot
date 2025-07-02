@@ -32,63 +32,48 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -160.0
-offset_top = -90.0
-offset_right = 160.0
-offset_bottom = 90.0
+offset_left = -257.0
+offset_top = -139.0
+offset_right = 235.0
+offset_bottom = 138.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="Container"]
 layout_mode = 2
 texture = ExtResource("2_0ebcr")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Container/TextureRect"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -131.0
-offset_top = -82.0
-offset_right = 133.0
-offset_bottom = 79.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="BoxContainer2" type="BoxContainer" parent="Container/TextureRect/VBoxContainer"]
-layout_mode = 2
-alignment = 1
+expand_mode = 3
 
 [node name="Label" type="Label" parent="Container/TextureRect"]
 layout_mode = 2
 offset_left = 2.0
 offset_top = 12.0
-offset_right = 317.0
+offset_right = 487.0
 offset_bottom = 62.0
 theme = ExtResource("3_0ebcr")
 theme_override_colors/font_color = Color(0.717348, 0.372721, 0.223172, 1)
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 80
 text = "Nueva Partida"
 horizontal_alignment = 1
 
 [node name="BoxContainer" type="BoxContainer" parent="Container/TextureRect"]
 layout_mode = 2
 offset_left = 2.0
-offset_top = 75.0
-offset_right = 319.0
-offset_bottom = 108.0
+offset_top = 116.0
+offset_right = 492.0
+offset_bottom = 163.0
 alignment = 1
 
 [node name="Label" type="Label" parent="Container/TextureRect/BoxContainer"]
 layout_mode = 2
 theme = ExtResource("3_0ebcr")
 theme_override_colors/font_color = Color(0.717647, 0.372549, 0.223529, 1)
+theme_override_font_sizes/font_size = 40
 text = "Nombre:"
 
 [node name="LineEdit" type="LineEdit" parent="Container/TextureRect/BoxContainer"]
-custom_minimum_size = Vector2(150, 0)
+clip_contents = true
+custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 theme = ExtResource("3_0ebcr")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -97,14 +82,14 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_4ao3t")
 [node name="Button_started" type="Button" parent="Container/TextureRect"]
 custom_minimum_size = Vector2(100, 30)
 layout_mode = 2
-offset_left = 110.0
-offset_top = 129.0
-offset_right = 210.0
-offset_bottom = 159.0
+offset_left = 180.0
+offset_top = 178.0
+offset_right = 333.0
+offset_bottom = 239.0
 theme = ExtResource("3_0ebcr")
 theme_override_colors/font_hover_color = Color(0.812405, 0.44186, 0.283936, 1)
 theme_override_colors/font_color = Color(0.717647, 0.372549, 0.223529, 1)
-theme_override_font_sizes/font_size = 22
+theme_override_font_sizes/font_size = 40
 theme_override_styles/hover = SubResource("StyleBoxTexture_5cm53")
 theme_override_styles/normal = SubResource("StyleBoxTexture_ule57")
 text = "Crear"

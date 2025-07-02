@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://dy5och7mxq8sp"]
+[gd_scene format=3 uid="uid://bg44mw7or85kv"]
 
-[node name="WorldsMenu" type="Control"]
+[node name="Mobile-tabs" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

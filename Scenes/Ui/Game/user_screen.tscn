@@ -12,13 +12,13 @@ script = ExtResource("1_h6y5c")
 
 [node name="Life" type="HBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 15.0
-offset_top = 539.0
-offset_right = 137.0
-offset_bottom = 619.0
+offset_left = 30.0
+offset_top = 157.0
+offset_right = 150.0
+offset_bottom = 219.0
 
 [node name="TextureRect" type="TextureRect" parent="Life"]
-custom_minimum_size = Vector2(80, 80)
+custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 texture = ExtResource("1_xnb83")
 expand_mode = 1
@@ -34,15 +34,15 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 1013.0
-offset_top = 536.0
-offset_right = 1116.0
-offset_bottom = 616.0
+offset_left = 25.0
+offset_top = 88.0
+offset_right = 128.0
+offset_bottom = 161.0
 grow_horizontal = 0
 grow_vertical = 0
 
 [node name="Label" type="TextureRect" parent="Coin"]
-custom_minimum_size = Vector2(80, 80)
+custom_minimum_size = Vector2(70, 60)
 layout_mode = 2
 texture = ExtResource("2_dia74")
 expand_mode = 1
@@ -53,10 +53,10 @@ text = "99"
 
 [node name="Time" type="HBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 499.0
-offset_top = 11.0
-offset_right = 660.0
-offset_bottom = 81.0
+offset_left = 24.0
+offset_top = 27.0
+offset_right = 185.0
+offset_bottom = 97.0
 
 [node name="TextureRect" type="TextureRect" parent="Time"]
 custom_minimum_size = Vector2(70, 70)

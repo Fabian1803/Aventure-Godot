@@ -385,9 +385,9 @@ script = ExtResource("1_on01i")
 [node name="slap1" type="TextureRect" parent="."]
 layout_mode = 0
 offset_left = -569.0
-offset_top = -443.0
+offset_top = -135.0
 offset_right = 1158.0
-offset_bottom = 656.0
+offset_bottom = 964.0
 texture = ExtResource("2_ujrah")
 
 [node name="slap1" type="AnimationPlayer" parent="slap1"]
@@ -398,9 +398,9 @@ autoplay = "slap1"
 
 [node name="bird" type="BoxContainer" parent="."]
 layout_mode = 0
-offset_left = 860.0
+offset_left = 1169.0
 offset_top = 279.0
-offset_right = 953.0
+offset_right = 1262.0
 offset_bottom = 370.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="bird"]
@@ -425,9 +425,9 @@ autoplay = "bird"
 
 [node name="slap2" type="TextureRect" parent="."]
 layout_mode = 0
-offset_top = 286.0
+offset_top = 963.0
 offset_right = 1153.0
-offset_bottom = 648.0
+offset_bottom = 1325.0
 texture = ExtResource("3_ee0gw")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="slap2"]
@@ -439,9 +439,9 @@ autoplay = "slap2"
 [node name="BoxContainer" type="TextureRect" parent="."]
 layout_mode = 0
 offset_left = -21.0
-offset_top = 120.0
+offset_top = -200.0
 offset_right = 1259.0
-offset_bottom = 533.0
+offset_bottom = 213.0
 
 [node name="cloud1" type="TextureRect" parent="BoxContainer"]
 layout_mode = 0

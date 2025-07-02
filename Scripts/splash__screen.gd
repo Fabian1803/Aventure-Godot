@@ -9,7 +9,10 @@ func _ready():
 	menu1.play()
 
 func _input(event):
-	if event is InputEventKey and event.pressed:
+	if (
+		(event is InputEventMouseButton and event.pressed) or
+		(event is InputEventScreenTouch and event.pressed)
+	):
 		if $slap1/slap1.has_animation("slap1") and $slap1/slap1.is_playing():
 			$slap1/slap1.seek($slap1/slap1.get_animation("slap1").length)
 			$slap1/slap1.speed_scale = 10.0

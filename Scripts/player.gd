@@ -6,12 +6,14 @@ extends CharacterBody3D
 @export var gravity := 9.8
 @export var sprint_speed := 10.0
 @export var mouse_sensitivity := 0.002
+var is_sprintingM := false
 
 # Referencias a nodos
 @onready var model = $"character-male-b"
 @onready var pivot = $Pivot
 @onready var cam = $Pivot/Camera3D
 @onready var animation_controller = $"character-male-b"  # Asegúrate de que tu nodo tiene los métodos esperados
+@onready var joystick = $tabs/Joistick
 
 #Life
 var vida_actual: int = 3 
@@ -42,9 +44,9 @@ func _physics_process(delta):
 		move_and_slide()  # Para que la gravedad actúe (cae al piso si está en el aire)
 		return  # ¡Y salimos del proceso!
 	# Dirección del movimiento
-	var input_dir = Input.get_vector("tap_left", "tap_right", "tap_up", "tap_down")
+	var input_dir = joystick.get_direccion()
 	var direction = Vector3.ZERO
-	var is_sprinting = Input.is_action_pressed("tap_sprint")
+	var is_sprinting = is_sprintingM
 	var current_speed = sprint_speed if is_sprinting else speed
 
 	if input_dir != Vector2.ZERO:
@@ -56,6 +58,7 @@ func _physics_process(delta):
 
 		velocity.x = direction.x * current_speed
 		velocity.z = direction.z * current_speed
+		
 
 		# Rotar el modelo para que mire hacia el movimiento
 		var look_dir = -Vector3(direction.x, 0, direction.z)
@@ -99,3 +102,17 @@ func recibir_danio(cantidad: int):
 		animation_controller.trigger_death()
 		await get_tree().create_timer(1.2).timeout
 		get_tree().reload_current_scene()
+
+
+func _on_button_jump_pressed() -> void:
+	if is_on_floor():
+		velocity.y = jump_force
+		if animation_controller.has_method("trigger_jump"):
+			animation_controller.trigger_jump()
+
+func _on_button_sprint_toggled(toggled_on: bool) -> void:
+	is_sprintingM = toggled_on
+
+
+func _on_button_stop_pressed() -> void:
+	pass # Replace with function body.
